@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    /* border: 1px solid green; */
+}
+:root{
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body{
+  font-size: 12px;
+  font-family: 'Big Shoulders Display', cursive;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
+  /* background-color: var(--Soft-violet);
+   */
+  background-image: linear-gradient(180deg, var(--Soft-violet), var(--Soft-blue));
+  padding: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.card{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 5% 5% 5% 0;
+    overflow: hidden;
+
+}
+
+.image{
+    width: 50%;
+    padding-right:4%;
+    position: relative;
+    overflow-y: visible;
+    overflow-x: clip;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.image .mainIcon{
+
+    position:absolute;
+    width: 100%;
+    z-index: 1;
+    right: 15%;
+}
+.image .bg-pattern{
+    position:absolute;
+    width: 120%;
+    right: 15%;
+    z-index: 0;
+
+}
+.content
+{
+   width: 50%;
+}
+.faq{
+    margin-bottom: 7%;
+    padding-left: 0.7rem;
+    font-size: 26px;
+}
+.QABox{
+
+    font-size: 13px;
+    padding: 0.7rem;
+    color: var(--Very-dark-grayish-blue);
+    border-bottom: 1.5px solid var(--Light-grayish-blue);
+}
+.line{
+    border: 2px solid var(--Dark-grayish-blue);
+}
+ .answer{
+    display: none;
+}
+.question{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 150%; */
+    padding-bottom: 0.7rem;
+  
+  
+}
+
+.question:hover{
+    color: var(--Soft-red);
+    cursor: pointer;
+}
+.box{
+    position:absolute;
+    bottom: 27%;
+    left: 7%;
+    z-index: 10;
+}
+
+/* Responsive-----------------------------*/
+
+@media only screen and (max-width :375px){
+    .card{
+        flex-direction: column;
+    }
+}
